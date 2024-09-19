@@ -1,19 +1,31 @@
-
-body {
+body { 
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-}
-
-h3 {
-    color: #006EB6;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 header {
     text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+main, footer {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto; 
+    text-align: left;
 }
 
 main {
-    text-align: left;
+    padding: 0 20px;
+}
+
+ol li {
+    margin-bottom: 15px;
 }
 
 footer {
@@ -25,4 +37,12 @@ footer {
 footer img {
     width: 150px;
     height: auto;
+}
+
+h3 {
+    color: #006EB6;
+}
+
+.italic {
+    font-style: italic;
 }
