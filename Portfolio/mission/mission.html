@@ -6,6 +6,7 @@
     <title>BYUI Mission Statement</title>
     <meta name="description" content="The mission statement for Brigham Young University-Idaho, outlining its goals and objectives.">
     <link rel="stylesheet" href="styles.css">
+    <script src="mission.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,6 +15,11 @@
     </header>
     
     <main>
+        <label for="theme-select">Choose Theme:</label>
+        <select id="theme-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
         <p>Brigham Young University-Idaho was founded and is supported and guided by The Church of Jesus Christ of Latter-day Saints. Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.</p>
 
         <p class="italic">The university does this by:</p>
@@ -23,10 +29,12 @@
             <li>Serving as many students as possible within resource constraints.</li>
             <li>Delivering education that is affordable for students and the Church.</li>
         </ol>
+        
     </main>
 
     <footer>
         <img src="byui-logo_blue.webp" alt="BYU-Idaho Logo">
     </footer>
+
 </body>
 </html>

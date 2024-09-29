@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: left;
+    background-color: white;
+    color: black;
 }
 
 header {
@@ -23,6 +25,7 @@ main, footer {
 
 main {
     padding: 0 20px;
+    margin: 0 auto;
 }
 
 ol li {
@@ -46,4 +49,30 @@ h3 {
 
 .italic {
     font-style: italic;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+header h1, header h3 {
+    text-align: center;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+footer img {
+    display: block;
+    margin: 0 auto;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+.dark h3 {
+    color: #0071bb;
 }
