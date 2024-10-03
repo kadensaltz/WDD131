@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy 3D Website</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #111;
+            color: #fff;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #08d1bd, #06ab9b);
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            perspective: 1000px; /* Enables 3D effects */
+        }
+
+        header h1 {
+            font-size: 3rem;
+            transform: rotateX(0deg) translateZ(50px);
+            animation: rotateHeader 6s infinite alternate ease-in-out;
+        }
+
+        @keyframes rotateHeader {
+            0% {
+                transform: rotateX(0deg) translateZ(50px);
+            }
+            100% {
+                transform: rotateX(360deg) translateZ(50px);
+            }
+        }
+
+        /* Navigation styling */
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li:hover {
+            transform: scale(1.2); /* Enlarge on hover */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #08d1bd;
+            animation: moveText 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        main p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 20px auto;
+            color: #ddd;
+        }
+
+        /* 3D Button */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #08d1bd;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d; /* Enables 3D */
+        }
+
+        .btn:hover {
+            transform: rotateY(360deg); /* Rotate the button in 3D on hover */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            perspective: 1000px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            transform: rotateX(0deg) translateZ(20px);
+            animation: footerTilt 6s infinite alternate ease-in-out;
+        }
+
+        @keyframes footerTilt {
+            0% {
+                transform: rotateX(0deg) translateZ(20px);
+            }
+            100% {
+                transform: rotateX(360deg) translateZ(20px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            main h2 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                font-size: 0.9rem;
+                padding: 8px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fancy 3D Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to a New Dimension of Web Design</h2>
+        <p>
+            This is not just a website; it's a 3D experience! Hover over the buttons, 
+            see the text rotate, and enjoy the smooth animations that make this website 
+            come to life. With responsive design and cool animations, you're set to impress 
+            your visitors.
+        </p>
+        <a href="#contact" class="btn">Experience More</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fancy 3D Website | Designed with Creativity</p>
+    </footer>
+
+</body>
+</html>

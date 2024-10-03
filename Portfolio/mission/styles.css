@@ -1,9 +1,8 @@
 body { 
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    text-align: left;
     background-color: white;
     color: black;
 }
@@ -75,4 +74,16 @@ p.italic {
 
 .dark h3 {
     color: #0071bb;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 2% 4%;
+    max-width: 600px;
+    border: 1px solid black;
+    margin-bottom: 2px;
+}
+
+.dark-theme .content {
+    border: 1px solid white;
 }
