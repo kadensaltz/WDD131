@@ -102,10 +102,37 @@ figure img {
 #dropdownMenu li:hover {
     background-color: #ddd;
 }
-  
-#dropdownButton:hover + #dropdownMenu,
-#dropdownMenu:hover {
-    display: block;
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-items: center;
+    color: white;
+    z-index: 10;
+    margin: 40px;
+    padding: 10px;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: start;
+    justify-self: end;
+    padding: 10px;
+  }
+
+.viewer img {
+    max-height: 100%;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 800px) {
