@@ -23,24 +23,47 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
 	}
-]
+	
+];
 
 function renderArticles() {
-	const container = document.getElementById('articles-container');
-	articles.forEach(article => {
-		const articleElement = document.createElement('article');
-		articleElement.innerHTML = `
-			<h3>${article.title}</h3>
-			<img src="${article.imgSrc}" alt="${article.imgAlt}">
-			<p><strong>Date:</strong> ${article.date}</p>
-			<p>${article.description}</p>
-			<p><strong>Ages:</strong> ${article.ages}</p>
-			<p><strong>Genre:</strong> ${article.genre}</p>
-			<p><strong>Rating:</strong> ${article.stars}</p>
-		`;
-		container.appendChild(articleElement);
-	});
+    const articlesContainer = document.getElementById('articles-container');
+
+    articles.forEach(article => {
+        const articleLeft = document.createElement('div');
+        articleLeft.classList.add('article-left');
+        articleLeft.innerHTML = `
+			<h4>${article.date}</h4>
+            <p>${article.ages}</p>
+            <p>${article.genre}</p>
+            <p>${article.stars}</p>
+        `;
+
+        const articleRight = document.createElement('div');
+        articleRight.classList.add('article-right');
+        articleRight.innerHTML = `
+            <h3>${article.title}</h3>
+            <img src="${article.imgSrc}" alt="${article.imgAlt}">
+            <p>${article.description}</p>
+        `;
+
+        articlesContainer.appendChild(articleLeft);
+        articlesContainer.appendChild(articleRight);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', renderArticles);
