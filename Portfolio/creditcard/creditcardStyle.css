@@ -26,11 +26,13 @@ main {
     grid-column: 1/3;
     background-color:lightgray;
     margin-bottom: 40px;
+    box-shadow: 1px 1px 1px 1px #525252;
+    border-radius: 10px;
 }
 
 #cardBack {
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     display: grid;
     padding: 15px;
     z-index: -1;
@@ -39,6 +41,7 @@ main {
     margin-left: 40px;
     grid-column: 2/4;
     background-color:lightgray;
+    border-radius: 10px;
 }
 
 #submitButton {
@@ -84,10 +87,19 @@ label {
 #CVCContainer {
     grid-column: 2/3;
     grid-row: 2/3;
+    align-self: center;
+    z-index: -1;
 }
 
 #cardStripe {
-    grid-row: 1/3;
-    grid-column: 2/3;
-    background-color: darkgrey;
+    grid-row: 1;
+    grid-column: 1/4;
+    background-color: rgb(39, 39, 39);
+    height: 35px;
+    width: 100%;
+}
+
+#amount {
+    font-weight: bold;
+    align-self: center;
 }
