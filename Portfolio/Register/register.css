@@ -160,3 +160,12 @@
     }
   }
   
+  .participants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .participants button {
+    grid-column: span 2; /* Make the button span across two columns */
+  }
