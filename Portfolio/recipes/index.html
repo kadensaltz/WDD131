@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta property="og:title" content="RecipeBook - Explore Delicious Recipes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Discover easy, delicious recipes for every occasion. From savory dishes to sweet desserts, RecipeBook has something for everyone!" />
+    <meta property="og:image" content="C:\Users\kaden\OneDrive\Desktop\WDD131\Portfolio\recipes\images\chocolate-chip-cookies.jpg" />
+    <meta property="og:url" content="https://kadensaltz.github.io/WDD131/Portfolio/recipes/index.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="stylesheet" href="recipes.css">
-    <script src="main.js" defer></script>
+    <script type="module" src="main.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,8 +20,13 @@
         <h1>Recipe Book</h1>
     </header>
 
-    <main>
+    <div class="search-bar">
+        <input type="text" placeholder="Find a recipe" aria-label="Search Recipes">
+        <button type="button">🔍</button>
+    </div>
 
+    <main>
+        <div id="recipes-container"></div>
     </main>
     
     <footer>
