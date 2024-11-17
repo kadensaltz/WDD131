@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+
+        body {
+            background-color: #ededed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login {
+            background-color: #ededed;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            padding: 10px;
+            box-shadow: 0 0 -2px 10px rgba(0, 0, 0, 0.2);
+            gap: 20px;
+        }
+
+        input {
+            font-size: 18px;
+            padding: 8px 12px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .message{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="login">
+        <h1>Login</h1>
+        <span class="message">&nbsp;</span>
+        <input type="text" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+    
+    <script>
+        const form = document.getElementById("login");
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
+        const messageContainer = document.querySelector(".message");
+
+        function writeMessage(message) {
+            messageContainer.innetText = message;
+        }
+
+        function onSubmit(event) {
+            event.preventDefault();
+            
+            if (!usernmae.value || !password.value) {
+                writeMessage("Please fill in all fields");
+            }
+
+            if (password.value !== "password") {
+                writeMessage("Wrong password");
+            }
+        }
+
+        form.addEventListener("submit", onSubmit);
+    </script>
+</body>
+</html>
