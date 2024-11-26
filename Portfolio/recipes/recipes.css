@@ -155,6 +155,21 @@ img {
     height: auto;
 }
 
+.recipe-card .recipe-tags {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-card .recipe-tags li {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+}
+
 @media screen and (min-width: 600px) {
     .recipe-card {
         flex-direction: row;
